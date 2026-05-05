@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'Fz Qellia';
-  src: url('/font/Fz_Qellia_Fix.ttf') format('truetype');
+  src: url('./font/Fz_Qellia_Fix.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,31 @@
 
 @font-face {
   font-family: 'The Nautigal';
-  src: url('/font/TheNautigal-Regular.ttf') format('truetype');
+  src: url('./font/TheNautigal-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Signora';
+  src: url('./font/1FTV-VIP-Signora-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  src: url('./font/HelveticaNeueLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chu Truyen Thong';
+  src: url('./font/UNI_Chu_truyen_thong.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -23,6 +47,9 @@
   --font-nautigal: "The Nautigal", cursive;
   --font-qellia: "Fz Qellia", serif;
   --font-lora: "Lora", serif;
+  --font-signora: "Signora", serif;
+  --font-helvetica-light: "Helvetica Neue Light", sans-serif;
+  --font-chu: "Chu Truyen Thong", serif;
   --font-roman: "Times New Roman", Times, serif;
 
   --color-gold-champagne: #E1BC7C;

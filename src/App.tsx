@@ -1,6 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Heart, Calendar, MapPin, Clock, X, ChevronLeft, ChevronRight, Send, Check, Music } from 'lucide-react';
+
+// Import local images
+import backgroundImage from './assets/img/background.webp';
+import flowerImage from './assets/img/flower.png';
+import frameTopLeft from './assets/img/frame-corner-top-left.webp';
+import frameHorizontal from './assets/img/frame-middle-horizontal.webp';
+import frameVertical from './assets/img/frame-middle-vertical.webp';
 
 // --- Constants & Data ---
 
@@ -59,19 +66,19 @@ const Frame = ({ children }: { children: React.ReactNode }) => {
         }}
       >
         {/* Corners */}
-        <img src="/img/frame-corner-top-left.webp" className="self-start justify-self-start" style={{ width: cornerSize }} alt="" />
+        <img src={frameTopLeft} className="self-start justify-self-start" style={{ width: cornerSize }} alt="" />
         <div className="flex items-center justify-center px-2">
           <div className="flex-1 flex items-center gap-2">
             <Dots />
             <div className="flex-1 h-px bg-gold-champagne/40"></div>
           </div>
-          <img src="/img/frame-middle-horizontal.webp" style={{ width: horizontalSize }} alt="" />
+          <img src={frameHorizontal} style={{ width: horizontalSize }} alt="" />
           <div className="flex-1 flex items-center gap-2">
             <div className="flex-1 h-px bg-gold-champagne/40"></div>
             <Dots />
           </div>
         </div>
-        <img src="/img/frame-corner-top-left.webp" className="self-start justify-self-end -scale-x-100" style={{ width: cornerSize }} alt="" />
+        <img src={frameTopLeft} className="self-start justify-self-end -scale-x-100" style={{ width: cornerSize }} alt="" />
 
         {/* Middle Vertical Links */}
         <div className="flex flex-col items-center justify-center py-2 h-full">
@@ -79,7 +86,7 @@ const Frame = ({ children }: { children: React.ReactNode }) => {
              <Dots vertical />
              <div className="flex-1 w-px bg-gold-champagne/40"></div>
            </div>
-           <img src="/img/frame-middle-vertical.webp" style={{ width: verticalWidth }} alt="" />
+           <img src={frameVertical} style={{ width: verticalWidth }} alt="" />
            <div className="flex-1 flex flex-col items-center gap-2">
              <div className="flex-1 w-px bg-gold-champagne/40"></div>
              <Dots vertical />
@@ -91,7 +98,7 @@ const Frame = ({ children }: { children: React.ReactNode }) => {
              <Dots vertical />
              <div className="flex-1 w-px bg-gold-champagne/40"></div>
            </div>
-           <img src="/img/frame-middle-vertical.webp" style={{ width: verticalWidth }} alt="" />
+           <img src={frameVertical} style={{ width: verticalWidth }} alt="" />
            <div className="flex-1 flex flex-col items-center gap-2" >
              <div className="flex-1 w-px bg-gold-champagne/40"></div>
              <Dots vertical />
@@ -99,19 +106,19 @@ const Frame = ({ children }: { children: React.ReactNode }) => {
         </div>
 
         {/* Bottom Borders */}
-        <img src="/img/frame-corner-top-left.webp" className="self-end justify-self-start -scale-y-100" style={{ width: cornerSize }} alt="" />
+        <img src={frameTopLeft} className="self-end justify-self-start -scale-y-100" style={{ width: cornerSize }} alt="" />
         <div className="flex items-center justify-center px-2">
            <div className="flex-1 flex items-center gap-2">
             <Dots />
             <div className="flex-1 h-px bg-gold-champagne/40"></div>
           </div>
-          <img src="/img/frame-middle-horizontal.webp" style={{ width: horizontalSize }} className="-scale-y-100" alt="" />
+          <img src={frameHorizontal} style={{ width: horizontalSize }} className="-scale-y-100" alt="" />
           <div className="flex-1 flex items-center gap-2">
             <div className="flex-1 h-px bg-gold-champagne/40"></div>
             <Dots />
           </div>
         </div>
-        <img src="/img/frame-corner-top-left.webp" className="self-end justify-self-end -scale-100" style={{ width: cornerSize }} alt="" />
+        <img src={frameTopLeft} className="self-end justify-self-end -scale-100" style={{ width: cornerSize }} alt="" />
       </div>
 
       {/* Actual Content Wrapper */}
@@ -511,20 +518,20 @@ export default function App() {
 
                {/* Flowers for Opening Effect */}
                <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                  <img src="/img/flower.png" alt="" className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] opacity-40" />
-                  <img src="/img/flower.png" alt="" className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[90%] opacity-40 -scale-y-100" />
+                  <img src={flowerImage} alt="" className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] opacity-40" />
+                  <img src={flowerImage} alt="" className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[90%] opacity-40 -scale-y-100" />
                   
                   {isOpening && (
                     <>
                       <motion.img 
-                        src="/img/flower.png" 
+                        src={flowerImage} 
                         initial={{ scale: 1, opacity: 0.5, x: '-50%', y: '-50%', top: 0, left: '50%' }}
                         animate={{ scale: 6, opacity: 0, filter: 'blur(20px)' }}
                         transition={{ duration: 2 }}
                         className="absolute w-[90%]"
                       />
                       <motion.img 
-                        src="/img/flower.png" 
+                        src={flowerImage} 
                         initial={{ scale: 1, opacity: 0.5, x: '-50%', y: '50%', bottom: 0, left: '50%', scaleY: -1 }}
                         animate={{ scale: 6, opacity: 0, filter: 'blur(20px)', scaleY: -1 }}
                         transition={{ duration: 2 }}
@@ -572,7 +579,7 @@ export default function App() {
         {/* GLOBAL BACKGROUNDS */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <img 
-          src="/img/background.webp" 
+          src={backgroundImage} 
           alt="" 
           className="absolute top-0 left-1/2 -translate-x-1/2 min-w-[130%] w-[130%] h-auto opacity-30 object-cover" 
         />
@@ -585,7 +592,7 @@ export default function App() {
         <header className="relative flex flex-col items-center text-center pt-[clamp(208px,43vw,358px)] pb-[83px] md:pb-[146px]">
           {/* Top Flower Decor */}
           <img 
-            src="/img/flower.png" 
+            src={flowerImage} 
             alt="" 
             className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] z-1 pointer-events-none" 
           />
