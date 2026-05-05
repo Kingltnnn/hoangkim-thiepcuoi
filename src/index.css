@@ -17,13 +17,47 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Signora';
+  src: url('/font/1FTV-VIP-Signora-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  src: url('/font/HelveticaNeueLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UNI Chu truyen thong';
+  src: url('/font/UNI_Chu_truyen_thong.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora Local';
+  src: url('/font/Lora-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-baskerville: "Libre Baskerville", serif;
   --font-nautigal: "The Nautigal", cursive;
   --font-qellia: "Fz Qellia", serif;
-  --font-lora: "Lora", serif;
-  --font-roman: "Times New Roman", Times, serif;
+  --font-lora: "Lora", "Lora Local", serif;
+  --font-roman: "Times New Roman", "Helvetica Neue Light", Times, serif;
+  --font-signora: "Signora", serif;
+  --font-traditional: "UNI Chu truyen thong", serif;
 
   --color-gold-champagne: #E1BC7C;
   --color-wine-red: #3E0001;
