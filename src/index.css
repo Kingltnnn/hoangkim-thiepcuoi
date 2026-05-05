@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+@font-face {
+  font-family: 'Fz Qellia';
+  src: url('/font/Fz_Qellia_Fix.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Nautigal';
+  src: url('/font/TheNautigal-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-baskerville: "Libre Baskerville", serif;
+  --font-nautigal: "The Nautigal", cursive;
+  --font-qellia: "Fz Qellia", serif;
+  --font-lora: "Lora", serif;
+  --font-roman: "Times New Roman", Times, serif;
+
+  --color-gold-champagne: #E1BC7C;
+  --color-wine-red: #3E0001;
+  --color-bright-red: #7A0003;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-20deg); opacity: 0; }
+  20% { opacity: 0.5; }
+  50% { opacity: 1; }
+  80% { opacity: 0.5; }
+  100% { transform: translateX(100%) skewX(-20deg); opacity: 0; }
+}
+
+@keyframes seal-pulse {
+  0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 rgba(225, 188, 124, 0.4); }
+  50% { transform: translate(-50%, -50%) scale(1.05); box-shadow: 0 0 20px rgba(225, 188, 124, 0.6); }
+  100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 rgba(225, 188, 124, 0.4); }
+}
+
+.animate-shine {
+  animation: shine 3s infinite linear;
+}
+
+.animate-seal-pulse {
+  animation: seal-pulse 2s infinite ease-in-out;
+}
+
+@layer base {
+  body {
+    @apply bg-wine-red text-gold-champagne font-baskerville antialiased;
+  }
+}
+
+.bg-red-gradient {
+  background: radial-gradient(circle at center, #7A0003 0%, #3E0001 100%);
+}
+
+/* Custom styles for components described in prompt */
+.markdown-body {
+  @apply text-gold-champagne;
+}
+
+/* Red Packet (Envelope) patterns */
+.pattern-dots {
+  background-image: radial-gradient(#b91c1c 2px, transparent 0);
+  background-size: 10px 10px;
+}
+
+.pattern-red-packet {
+  background-image: repeating-radial-gradient(circle at 10px 10px, rgba(153, 27, 27, 0.4) 0, rgba(153, 27, 27, 0.4) 2px, transparent 2px, transparent 10px);
+}
+
