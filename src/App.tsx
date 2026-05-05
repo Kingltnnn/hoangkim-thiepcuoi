@@ -574,7 +574,7 @@ export default function App() {
         <img 
           src="/img/background.webp" 
           alt="" 
-          className="absolute top-0 left-1/2 -translate-x-1/2 min-w-[130%] w-[130%] h-auto opacity-30 object-cover" 
+          className="absolute top-0 left-1/2 -translate-x-1/2 min-w-[130%] w-[130%] h-auto opacity-30" 
         />
         <div className="absolute inset-0 bg-red-gradient opacity-80" />
       </div>
