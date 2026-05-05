@@ -162,7 +162,7 @@ const Countdown = () => {
 
   return (
     <div className="flex flex-col items-center gap-4 py-6">
-      <p className="font-roman font-bold uppercase text-lg italic tracking-widest">Cùng đếm ngược</p>
+      <p className="font-signora font-normal uppercase text-3xl tracking-widest text-gold-champagne/90">Cùng đếm ngược</p>
       <div className="flex gap-4 sm:gap-6 text-gold-champagne font-baskerville">
         <div className="flex flex-col items-center">
           <span className="text-2xl sm:text-3xl font-bold">{formatNumber(timeLeft.d)}</span>
@@ -248,7 +248,7 @@ const Modal = ({ isOpen, onClose, title, children }: { isOpen: boolean, onClose:
         className="w-full max-w-lg bg-wine-red rounded-2xl overflow-hidden border border-gold-champagne/20 shadow-2xl"
       >
         <div className="bg-gold-champagne px-6 py-4 flex justify-between items-center text-wine-red">
-          <h2 className="text-xl font-roman font-bold tracking-widest flex-1 text-center pl-6">{title}</h2>
+          <h2 className="text-xl font-signora font-normal tracking-[0.2em] flex-1 text-center pl-6">{title}</h2>
           <button onClick={onClose} className="p-1 hover:bg-wine-red/10 rounded-full transition-colors">
             <X size={24} />
           </button>
@@ -278,14 +278,14 @@ const RedEnvelopeModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =>
                     >
                         <X size={20} />
                     </button>
-                    <h2 className="text-2xl font-roman font-bold text-wine-red" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}>Hộp Mừng Cưới</h2>
+                    <h2 className="text-2xl font-signora font-normal text-wine-red tracking-[0.1em]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.1)' }}>Hộp Mừng Cưới</h2>
                 </div>
                 
                 <div className="p-4 sm:p-8 overflow-y-auto max-h-[calc(90vh-80px)]">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {/* Groom */}
                         <div className="rounded-2xl p-6 flex flex-col items-center bg-[#E1BC7C]/5 border border-[#E1BC7C]/20 shadow-lg">
-                            <h3 className="text-sm font-roman font-bold text-[#E1BC7C] mb-4 text-center">Chú Rể - Quốc Anh</h3>
+                    <h3 className="text-sm font-signora font-normal text-[#E1BC7C] mb-4 text-center tracking-wider">Chú Rể - Quốc Anh</h3>
                             <div className="w-40 h-40 bg-white rounded-xl p-3 shadow-inner flex items-center justify-center mb-4">
                                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=VCB-874897489498" alt="QR Quốc Anh" className="w-full h-full" />
                             </div>
@@ -300,7 +300,7 @@ const RedEnvelopeModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =>
 
                         {/* Bride */}
                         <div className="rounded-2xl p-6 flex flex-col items-center bg-[#E1BC7C]/5 border border-[#E1BC7C]/20 shadow-lg">
-                            <h3 className="text-sm font-roman font-bold text-[#E1BC7C] mb-4 text-center">Cô Dâu - Cát Tường</h3>
+                    <h3 className="text-sm font-signora font-normal text-[#E1BC7C] mb-4 text-center tracking-wider">Cô Dâu - Cát Tường</h3>
                             <div className="w-40 h-40 bg-white rounded-xl p-3 shadow-inner flex items-center justify-center mb-4">
                                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=VTB-8084856145" alt="QR Cát Tường" className="w-full h-full" />
                             </div>
@@ -345,7 +345,7 @@ const RSVPModal = ({ isOpen, onClose, initialName }: { isOpen: boolean, onClose:
         <div className="px-6 pb-6 overflow-y-auto max-h-[calc(85vh-72px)]">
           <div>
             <h2 className="text-xl font-semibold text-gray-900 mb-1">Xác nhận tham dự</h2>
-            <div className="text-sm text-gray-500 mb-6">
+            <div className="text-sm font-chu text-gray-500 mb-6 leading-relaxed">
               Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng tôi. Xin xác nhận để chúng tôi chuẩn bị chu đáo nhất cho bạn.
             </div>
             <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); onClose(); }}>
@@ -816,13 +816,13 @@ export default function App() {
 
         {/* SECTION: LỊCH TRÌNH */}
         <section className="relative z-10 px-6 md:px-10 pb-12 flex flex-col items-center">
-             <h2 className="font-roman font-bold uppercase text-[20px] md:text-[24px] mb-8">LỊCH TRÌNH NGÀY CƯỚI</h2>
+             <h2 className="font-signora font-normal uppercase text-[28px] md:text-[34px] mb-8 tracking-wider">LỊCH TRÌNH NGÀY CƯỚI</h2>
              <div className="w-full max-w-[320px] md:max-w-[400px]">
                 <ol className="relative flex flex-col gap-0">
                    {TIMELINE_DATA.map((item, i) => (
                      <li key={i} className="grid grid-cols-[1fr_40px_1.5fr] items-start pb-8 last:pb-4">
                         <div className="text-right pr-4 pt-0.5">
-                            <span className="font-baskerville text-base md:text-lg tabular-nums tracking-wide">{item.time}</span>
+                            <span className="font-helvetica-light text-base md:text-lg tabular-nums tracking-wide">{item.time}</span>
                         </div>
                         <div className="relative flex flex-col items-center justify-center p-1.5 h-full">
                            <div className="w-2.5 h-2.5 rounded-full bg-gold-champagne relative z-10 shadow-[0_0_8px_#E1BC7C]"></div>
@@ -834,7 +834,7 @@ export default function App() {
                            )}
                         </div>
                         <div className="pl-4 pt-0">
-                           <span className="font-baskerville text-lg md:text-xl font-medium">{item.event}</span>
+                           <span className="font-chu text-lg md:text-xl font-medium tracking-wide">{item.event}</span>
                         </div>
                      </li>
                    ))}
@@ -844,7 +844,7 @@ export default function App() {
 
         {/* SECTION: SỔ LƯU BÚT */}
         <section className="relative z-10 px-6 md:px-10 py-12 bg-wine-red/20 backdrop-blur-sm">
-             <h2 className="font-roman font-bold uppercase text-[20px] md:text-[26px] mb-8 text-center">Sổ lưu bút</h2>
+             <h2 className="font-signora font-normal uppercase text-[24px] md:text-[32px] mb-8 text-center tracking-widest">Sổ lưu bút</h2>
              <div className="w-full max-w-[600px] mx-auto flex flex-col gap-4">
                  <input 
                     type="text" 
@@ -862,7 +862,7 @@ export default function App() {
                   />
                   <button 
                      onClick={handleSendMessage}
-                     className="bg-gold-champagne text-wine-red rounded-full py-3 px-8 font-roman font-bold hover:scale-[1.05] transition-transform self-center shadow-lg"
+                     className="bg-gold-champagne text-wine-red rounded-full py-3 px-8 font-signora font-normal text-xl tracking-wider hover:scale-[1.05] transition-transform self-center shadow-lg"
                   >
                      GỬI LỜI CHÚC
                   </button>
@@ -975,7 +975,7 @@ export default function App() {
 
         {/* FOOTER */}
         <footer className="relative z-10 py-16 px-6 text-center border-t border-gold-champagne/13">
-             <p className="font-baskerville italic text-[14px] md:text-[18px] leading-relaxed mb-12 whitespace-pre-line">
+            <p className="font-chu italic text-xl md:text-2xl leading-relaxed mb-12 whitespace-pre-line text-gold-champagne/90">
                 Gia đình xin chân thành cảm ơn quý khách{"\n"}đã đến chung vui.
              </p>
              <div className="text-center opacity-40">
