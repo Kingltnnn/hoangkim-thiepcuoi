@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'Fz Qellia';
-  src: url('/font/Fz_Qellia_Fix.ttf') format('truetype');
+  src: url('./assets/font/Fz_Qellia_Fix.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'The Nautigal';
-  src: url('/font/TheNautigal-Regular.ttf') format('truetype');
+  src: url('./assets/font/TheNautigal-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: 'Signora';
-  src: url('/font/1FTV-VIP-Signora-Regular.otf') format('opentype');
+  src: url('./assets/font/1FTV-VIP-Signora-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'Helvetica Neue Light';
-  src: url('/font/HelveticaNeueLight.otf') format('opentype');
+  src: url('./assets/font/HelveticaNeueLight.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: 'UNI Chu truyen thong';
-  src: url('/font/UNI_Chu_truyen_thong.ttf') format('truetype');
+  src: url('./assets/font/UNI_Chu_truyen_thong.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: 'Lora Local';
-  src: url('/font/Lora-Regular.ttf') format('truetype');
+  src: url('./assets/font/Lora-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
