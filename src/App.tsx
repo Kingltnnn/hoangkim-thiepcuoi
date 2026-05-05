@@ -958,7 +958,7 @@ export default function App() {
                 Gia đình xin chân thành cảm ơn quý khách{"\n"}đã đến chung vui.
              </p>
              <div className="text-center opacity-40">
-                <a href="#" className="font-baskerville text-xs hover:opacity-100 transition-opacity">♡ chungdoi.com</a>
+                <a href="#" className="font-baskerville text-xs hover:opacity-100 transition-opacity">♡ Trăm Năm Hạnh Phúc ♡ </a>
              </div>
         </footer>
       </div>
